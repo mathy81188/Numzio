@@ -1,56 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página principal -->
   <url>
     <loc>https://numzio.com.ar/</loc>
+    <lastmod>2026-01-19</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- Sección Sobre -->
-  <url>
-    <loc>https://numzio.com.ar/#sobre</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Sección Contacto -->
-  <url>
-    <loc>https://numzio.com.ar/#contacto</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Acordeones temáticos (anclas internas) -->
-  <url>
-    <loc>https://numzio.com.ar/#collapseNaturales</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapseEnteros</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapseRacionales</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapseIrracionales</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapseReales</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapseDivisores</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapseMultiplos</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://numzio.com.ar/#collapsePrimos</loc>
-    <priority>0.5</priority>
-  </url>
-  <!-- Podés agregar más acordeones si los tenés -->
-
 </urlset>

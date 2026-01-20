@@ -196,14 +196,46 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector('form[action*="formspree"]');
 
-  // Solo se ejecuta si la respuesta fue exitosa
-  form.addEventListener("submit", function () {
-    // Esperamos un poco más para asegurarnos que Formspree procese bien
-    window.addEventListener("load", function () {
-      form.clear();
+  // Elementos del Toast
+  const toastElement = document.getElementById('liveToast');
+  const toastMessage = document.getElementById('toast-message');
+
+  // Inicializamos el componente Toast de Bootstrap
+  const bsToast = new bootstrap.Toast(toastElement);
+
+  if (form) {
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset(); // Vaciamos el formulario
+
+          // Configuramos el Toast de Éxito
+          toastMessage.textContent = "¡Mensaje enviado con éxito!";
+          toastElement.className = "toast align-items-center text-white bg-success border-0 show";
+          bsToast.show();
+        } else {
+          throw new Error();
+        }
+      } catch (error) {
+        // Configuramos el Toast de Error
+        toastMessage.textContent = "Error al enviar. Intenta de nuevo.";
+        toastElement.className = "toast align-items-center text-white bg-danger border-0 show";
+        bsToast.show();
+      }
     });
-  });
+  }
 });
+
 
 // === Funciones auxiliares ===
 function esPrimo(n) {
